@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
     private float turnSpeed = 45.0f;
     private float horizontalInput;
     private float forwardInput;
+    public Camera mainCamera; 
+    public Camera hoodCamera;
+    public KeyCode switchKey;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,5 +22,8 @@ public class PlayerController : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+        if (Input.GetKeyDown(switchKey)) 
+        { 
+        }
     }
 }
