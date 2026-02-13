@@ -23,7 +23,10 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         if (Input.GetKeyDown(switchKey)) 
-        { 
+        {
+            mainCamera.enabled = !mainCamera.enabled;
+            hoodCamera.enabled = !hoodCamera.enabled;
+
         }
     }
 }
