@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public class SpinPropeller : MonoBehaviour
-{
+{ 
+   public float rotatSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
